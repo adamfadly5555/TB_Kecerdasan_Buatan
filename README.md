@@ -25,7 +25,7 @@ df.info()
 df.describe()
 ```
 
-### 3. Visualisasi Awal Data
+### 3. Eksplorasi Awal Data
 ```python
 # Ukuran data
 print("Shape:", df.shape)
