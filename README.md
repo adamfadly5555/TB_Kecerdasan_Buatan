@@ -1,7 +1,7 @@
 
-# 🧠 Tugas Besar Kecerdasan Buatan: Prediksi Penyakit Paru-paru Berdasarkan Data Kebiasaan Harian Dengan Metode K-Nearest Neighboor
+#  Tugas Besar Kecerdasan Buatan: Prediksi Penyakit Paru-paru Berdasarkan Data Kebiasaan Harian Dengan Metode K-Nearest Neighboor
 
-## 📄 Deskripsi
+##  Deskripsi
 Tujuan utama dari proyek ini adalah membangun dan mengimplementasikan sebuah sistem klasifikasi berbasis kecerdasan buatan yang mampu memprediksi risiko penyakit paru-paru pada individu berdasarkan data gejala dan faktor risiko seperti kebiasaan merokok, usia, dan pola aktivitas. Sistem ini dikembangkan menggunakan algoritma K-Nearest Neighbor (KNN) karena algoritma ini sederhana, efektif, serta memiliki kemampuan tinggi dalam menangani data dengan banyak variabel dan memberikan hasil klasifikasi yang akurat. Dengan adanya sistem ini, diharapkan proses deteksi dini penyakit paru-paru dapat dilakukan secara otomatis dan efisien, sehingga mendukung pengambilan keputusan medis yang lebih cepat dan tepat.
 
 ---
@@ -36,12 +36,12 @@ df.info()
 df.describe()
 ```
 
-### 4. Pembersihan Data
+### 4. Pemeriksaan tipe data
 ```python
 print(df.dtypes)
 ```
 
-### 5. Encoding Label dan Standardisasi
+### 5. Visualisasi distribusi label
 ```python
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -53,12 +53,12 @@ plt.ylabel('Jumlah')
 plt.show()
 ```
 
-### 6. Visualisasi Korelasi
+### 6. Menampilkan data kolom
 ```python
 sprint(df.columns)
 ```
 
-### 7. Split Data (Train-Test)
+### 7. Visualisasi Fitur Kategori
 ```python
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -85,12 +85,12 @@ plt.tight_layout()
 plt.show()
 ```
 
-### 8. Modeling dengan KNN
+### 8. Distribusi kelas target
 ```python
 print(df['Hasil'].value_counts(normalize=True))
 ```
 
-### 9. Evaluasi Model
+### 9. Analisis hubungan variabel
 ```python
 import pandas as pd
 
@@ -100,19 +100,19 @@ print(pd.crosstab(df['Usia'], df['Hasil'], normalize='index'))
 
 ```
 
-### 10. Visualisasi PCA
+### 10. Pemeriksaan data kosong dan duplikat
 ```python
 print(df.isnull().sum())
 
 print(df.duplicated().sum())
 ```
 
-### 11. Pembandingan Beberapa Model
+### 11. Pembersihan data lanjutan
 ```python
 df.drop_duplicates(inplace=True)
 df.dropna(inplace=True)
 ```
-### 11. Pembandingan Beberapa Model
+### 12. Encoding Seluruh Fitur dengan LabelEncoder
 ```python
 from sklearn.preprocessing import LabelEncoder
 
@@ -123,7 +123,7 @@ print(df_encoded)
 
 
 ```
-### 11. Pembandingan Beberapa Model
+### 13. Standarisasi Fitur Numerik
 ```python
 from sklearn.preprocessing import StandardScaler
 
@@ -137,7 +137,7 @@ print(df_encoded.head())
 
 
 ```
-### 11. Pembandingan Beberapa Model
+### 14. Visualisasi Korelasi antar Fitur
 ```python
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -153,7 +153,7 @@ plt.show()
 
 
 ```
-### 11. Pembandingan Beberapa Model
+### 15. Split Data
 ```python
 from sklearn.model_selection import train_test_split
 
@@ -167,7 +167,7 @@ print("y_train:\n", y_train)
 
 
 ```
-### 11. Pembandingan Beberapa Model
+### 16. Pelatihan Model KNN
 ```python
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, classification_report
@@ -178,7 +178,7 @@ model.fit(X_train, y_train)
 
 
 ```
-### 11. Pembandingan Beberapa Model
+### 17. Visualisasi Evaluasi Model KNN
 ```python
 
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
@@ -193,7 +193,7 @@ plt.title("Confusion Matrix - KNN")
 plt.show()
 
 ```
-### 11. Pembandingan Beberapa Model
+### 18. Evaluasi Model KNN – Akurasi & Laporan Klasifikasi
 ```python
 
 # Prediksi data test
@@ -204,7 +204,7 @@ print("Akurasi:", accuracy_score(y_test, y_pred))
 print("\nKlasifikasi:\n", classification_report(y_test, y_pred))
 
 ```
-### 11. Pembandingan Beberapa Model
+### 19.Visualisasi Klasifikasi KNN dalam Ruang 2D (PCA)
 ```python
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
@@ -233,7 +233,7 @@ plt.grid(True)
 plt.show()
 
 ```
-### 11. Pembandingan Beberapa Model
+### 20. Evaluasi Model KNN
 ```python
 
 from sklearn.neighbors import KNeighborsClassifier
@@ -248,7 +248,7 @@ print("Akurasi KNN:", accuracy_score(y_test, y_knn_pred))
 print("\nKlasifikasi KNN:\n", classification_report(y_test, y_knn_pred))
 
 ```
-### 11. Pembandingan Beberapa Model
+### 21.Evaluasi Model Naive Bayes
 ```python
 from sklearn.naive_bayes import GaussianNB
 
@@ -261,7 +261,7 @@ print("\nKlasifikasi Naive Bayes:\n", classification_report(y_test, y_nb_pred))
 
 
 ```
-### 11. Pembandingan Beberapa Model
+### 22.Evaluasi Model SVM
 ```python
 from sklearn.svm import SVC
 
@@ -274,7 +274,7 @@ print("\nKlasifikasi SVM:\n", classification_report(y_test, y_svm_pred))
 
 
 ```
-### 11. Pembandingan Beberapa Model
+### 11. Perbandingan Akurasi Beberapa Model Klasifikasi
 ```python
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
