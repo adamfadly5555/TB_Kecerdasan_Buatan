@@ -122,9 +122,7 @@ for name, model in models.items():
 
 ---
 
-## 📦 Library yang Dibutuhkan
-```bash
-pip install pandas matplotlib seaborn scikit-learn
+
 ```
 
 ## Kesimpulan
