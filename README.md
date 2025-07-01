@@ -1,12 +1,12 @@
 
-# 🧠 Proyek Kecerdasan Buatan: Prediksi Kesehatan Berdasarkan Gaya Hidup
+# 🧠 Tugas Besar Kecerdasan Buatan: Prediksi Penyakit Paru-paru Berdasarkan Data Kebiasaan Harian Dengan Metode K-Nearest Neighboor
 
 ## 📄 Deskripsi
-Proyek ini bertujuan untuk memprediksi status kesehatan seseorang berdasarkan kebiasaan seperti merokok, begadang, dan aktivitas olahraga, menggunakan beberapa algoritma machine learning seperti KNN, Decision Tree, Naive Bayes, dan SVM.
+Tujuan utama dari proyek ini adalah membangun dan mengimplementasikan sebuah sistem klasifikasi berbasis kecerdasan buatan yang mampu memprediksi risiko penyakit paru-paru pada individu berdasarkan data gejala dan faktor risiko seperti kebiasaan merokok, usia, dan pola aktivitas. Sistem ini dikembangkan menggunakan algoritma K-Nearest Neighbor (KNN) karena algoritma ini sederhana, efektif, serta memiliki kemampuan tinggi dalam menangani data dengan banyak variabel dan memberikan hasil klasifikasi yang akurat. Dengan adanya sistem ini, diharapkan proses deteksi dini penyakit paru-paru dapat dilakukan secara otomatis dan efisien, sehingga mendukung pengambilan keputusan medis yang lebih cepat dan tepat.
 
 ---
 
-## 🔧 Langkah-langkah Pengerjaan
+##  Langkah-langkah Pengerjaan
 
 ### 1. Mount Google Drive & Akses Dataset
 ```python
@@ -127,6 +127,5 @@ for name, model in models.items():
 pip install pandas matplotlib seaborn scikit-learn
 ```
 
-## 📝 Catatan
-- Dataset berada di Google Drive (`predic_tabel.csv`)
-- Proyek ini dapat dijalankan di Google Colab untuk kemudahan penggunaan.
+## Kesimpulan
+Proyek ini berhasil membangun sebuah sistem prediksi penyakit paru-paru berbasis algoritma K-Nearest Neighbor (KNN) dengan menggunakan data dari platform Kaggle. Proses pembangunan sistem meliputi pembersihan data, transformasi fitur, pelatihan model, serta evaluasi kinerja. Meskipun seluruh pipeline sudah dijalankan dengan benar, hasil akhir model KNN menunjukkan akurasi yang masih rendah, yaitu sekitar 38,9%. Ini berarti model belum dapat secara andal digunakan untuk klasifikasi risiko penyakit paru-paru. Penyebab utamanya kemungkinan berasal dari kualitas dataset, ketidakseimbangan kelas, dan kompleksitas data yang tidak bisa ditangani secara optimal oleh KNN tanpa teknik tambahan.
